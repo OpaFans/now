@@ -1,0 +1,23 @@
+belum tes semua yang baru itu versi 
+kenapa ada beberapa fitur yang memang interaktif tetapi user harus ketik sendiri .batalkan kenapa ngga betuk button aja ?? kaya waktu lapor, dan juga saya mau multiprefix tidak hanya . saja tapi bisa # atau yang lain, juga pada saat user kirim bukti gambar tanpa cation atau hanya gambar saja bot error [CRASH REPORT]
+
+
+
+User: Giri Raya Nursamto (6285150588080@s.whatsapp.net)
+
+
+
+Cmd: [No Body]
+
+
+
+Err: TypeError: sock.downloadMediaMessage is not a function
+
+
+
+    at EventEmitter.<anonymous> (C:\Users\DELL\Downloads\bot new\bot.js:571:46), juga yang fitur lapor juga saya mau bisa kirim gambar atau stiker dan pada startup bot bisa kirim pesan ke owner bahwa bot aktif, dan juga yang vmess, trojan, vless outputnya kan dinamis ya tergantung server tapi saya mau isi dari misal trojan kan ada tls nah isi dari tls itu bisa ada button copy nya gitu pokoknya semua protokol dan metode bisa  gitu aja entah kaya donasi tuh kan dia bisa copy gitu beserta ada gambarnya dan saya mau bisa beda beda nanti saya buat folder baru yaitu forder image agar bisa taruh qris.png gambar untuk case donasi atau tambahan gambar vmess trojan gitu, buat full kode tanpa  disederhanakan !!! 
+
+
+
+    next update fitur topup acc itu blum dan tambah saldo jg ilang untuk versi claude
+    
