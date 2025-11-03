@@ -34,7 +34,7 @@ const crypto = require('crypto');
 const moment = require('moment-timezone');
 const sqlite3 = require('sqlite3').verbose();
 const util = require('util');
-
+moment.locale('id');
 // --- 2. PENGATURAN GLOBAL & DATABASE ---
 
 // Variabel Global
