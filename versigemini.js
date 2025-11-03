@@ -1260,8 +1260,19 @@ async function connectToWhatsApp() {
                 case 'help': {
 
                     let roleText = '👤 User Biasa';
-                    if (isPrem && !isOwner) roleText = '🎖️ Reseller Premium';
-                    if (isOwner) roleText = '👑 Developer';
+                    if (isOwner) {
+                        roleText = '👑 Developer';
+                    } else if (isPrem && user.premiumTime > 0) { 
+                        // isPrem = true DAN dia bukan owner, jadi dia reseller
+                        // Kita hitung sisa waktunya
+                        const sisaWaktu = moment(user.premiumTime).fromNow(true); // Hasilnya: "30 hari", "beberapa jam", dll.
+                        // Kita buat jadi 2 baris
+                        roleText = `🎖️ Reseller Premium\n│ 🕒 ꜱɪꜱᴀ : *${sisaWaktu}*`;
+                    } else if (isPrem) {
+                        // Fallback jika isPrem true tapi premiumTime tidak ada (misal: owner lama)
+                        roleText = '🎖️ Reseller Premium';
+                    }
+                    
                     const welcomeText = `*ꜱᴇʟᴀᴍᴀᴛ ᴅᴀᴛᴀɴɢ ᴅɪ ${ownername.toUpperCase()} 👋*\n\n` + `┏━━━❏ *ɪɴꜰᴏ ᴜꜱᴇʀ* ❏━━━┓\n` +
                                        `│ 💁‍♀️ ɴᴀᴍᴀ : ${pushName}\n` + `│ 💵 ꜱᴀʟᴅᴏ : *Rp ${user.balance.toLocaleString('id-ID')}*\n` +
                                        `│ 📱 ɴᴏᴍᴏʀ : *${user.verified_number ? user.verified_number : 'Belum Terverifikasi (.verifotp)'}*\n` + `│ ${roleText}\n` +
